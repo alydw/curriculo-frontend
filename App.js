@@ -1,9 +1,11 @@
 import * as React from 'react';
 import { Heading, NativeBaseProvider, VStack } from 'native-base';
-import { StyleSheet, Text, View, Button } from 'react-native';
+import { StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Tabs from './navigation/tabs';
+import { QueryClient, QueryClientProvider } from "react-query";
+
+const queryClient = new QueryClient();
 
 export default function App() {
 
@@ -13,12 +15,14 @@ export default function App() {
     </VStack>
   }
   return (
+    <QueryClientProvider client={queryClient}>
     <NavigationContainer>
     <NativeBaseProvider>
     <Head></Head>
     <Tabs></Tabs>
     </NativeBaseProvider>
     </NavigationContainer>
+    </QueryClientProvider>
   );
 }
 

@@ -57,7 +57,7 @@ export default function HomeScreen() {
   const styles = StyleSheet.create({
     box: {
         alignItems: 'center',
-        padding: "40px",
+        padding: "20px",
     },
     imageBackground: {
         width: "100%",

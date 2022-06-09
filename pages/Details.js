@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Heading, NativeBaseProvider, VStack, Stack, HStack, Box, AspectRatio, Image,
- Center,} from 'native-base';
+ Center, ScrollView} from 'native-base';
 import { StyleSheet, Text, View, ImageBackground } from 'react-native';
 
   export default function DetailsScreen() {
@@ -115,11 +115,13 @@ import { StyleSheet, Text, View, ImageBackground } from 'react-native';
       <View style={styles.container}> 
       <ImageBackground source={require('../assets/fundo.jpg')} style={styles.imageBackground}>
       <NativeBaseProvider>
+      <ScrollView>
       <Head></Head>
       <View style={styles.container}>
       <Experience></Experience>
       <Experience2></Experience2>
       </View>
+      </ScrollView>
       </NativeBaseProvider>
       </ImageBackground>
       </View>
